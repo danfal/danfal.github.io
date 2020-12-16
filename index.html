@@ -15,17 +15,17 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>danfal</h1>
-        <p></p>
-
-
-        <p class="view"><a href="https://github.com/danfal">View My GitHub Profile</a></p>
+        <h1>Fyller pigen år?</h1>
 
       </header>
-      <section>
-        <h1>
-<a id="hello-world" class="anchor" href="#hello-world" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hello World!</h1>
-
+<script>
+   if ((new Date()).setHours(0,0,0,0) == new Date(2020, 12, 21)) {
+    document.write("<p>Joffa fyller år!</p>"); 
+   } else {
+    document.write("<p>Joffa fyller INTE år!</p>");
+   }
+</script>
+<!--
 <p>Testing testing</p>
 
 <pre><code>apa :: Int -&gt; Int
@@ -37,6 +37,7 @@ apa n = 1 + n
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+--!>
     
   </body>
 </html>
