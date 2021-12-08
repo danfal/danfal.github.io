@@ -14,16 +14,17 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>Fyller pigen år?</h1>
-      </header>
+      <h1>Fyller pigen år?</h1>
       <script>
-         today = new Date();
-         if (today.getMonth() === 11 && today.getDate() === 21) {
+        today = new Date();
+        birthday = new Date(today.getFullYear(), 11, 21);
+        if (birthday < today) birthday.setFullYear(today.getFullYear() + 1);
+        difference = Math.round(Math.abs(birthday - today) / (24 * 60 * 60 * 1000));
+        if (today.getMonth() === 11 && today.getDate() === 21) {
           document.write("<h2>Joffa fyller år!</h2>"); 
-         } else {
-          document.write("<h2>Joffa fyller INTE år!</h2>");
-         }
+        } else {
+          document.write(`<h2>Joffa fyller INTE år (det är ${difference} dagar kvar)!</h2>`);
+        }
       </script>
   </body>
 </html>
