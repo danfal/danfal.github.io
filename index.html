@@ -19,7 +19,7 @@
         today = new Date();
         birthday = new Date(today.getFullYear(), 11, 21);
         if (birthday < today) birthday.setFullYear(today.getFullYear() + 1);
-        difference = Math.round(Math.abs(birthday - today) / (24 * 60 * 60 * 1000));
+        difference = Math.round(Math.abs(birthday - today) / (24 * 60 * 60 * 1000)) + 1;
         if (today.getMonth() === 11 && today.getDate() === 21) {
           document.write("<h2>Joffa fyller år!</h2>"); 
         } else {
